@@ -369,7 +369,8 @@ function show_next_fun(img){
     document.body.classList.toggle("body_color");
     bottom_hide_img.innerHTML="";
 
-    count=img.src.slice(51);
+    count=img.src.slice(22);
+
     Focus_img.src=count;
 
     if(img.parentElement.className=="top_Nature_img"){
@@ -412,7 +413,7 @@ document.getElementById("right_btn").addEventListener("click",()=>{
 
 bottom_hide_img.addEventListener("click",(event)=>{
 
-    let value=event.target.src.slice(51);
+    let value=event.target.src.slice(22);
     count=find_img_type? Arr_in_Cities.indexOf(value):Arr_in_Nature.indexOf(value);
     Focus_img.src=find_img_type? Arr_in_Cities[count]:Arr_in_Nature[count];
   optacity_add_fun();
