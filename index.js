@@ -363,13 +363,13 @@ container_1_img.forEach((images)=>{
 })
 
 function show_next_fun(img){
-  console.log(img.src);
+
     container_1.classList.toggle("container_1_none");
     container_2.classList.toggle("main_container1_block");
     document.body.classList.toggle("body_color");
     bottom_hide_img.innerHTML="";
 
-    count=img.src.slice(22);
+    count=img.src.slice(51);
     Focus_img.src=count;
 
     if(img.parentElement.className=="top_Nature_img"){
@@ -411,15 +411,14 @@ document.getElementById("right_btn").addEventListener("click",()=>{
 });
 
 bottom_hide_img.addEventListener("click",(event)=>{
-  console.log(event.target.src);
-    let value=event.target.src.slice(22);
 
+    let value=event.target.src.slice(51);
     count=find_img_type? Arr_in_Cities.indexOf(value):Arr_in_Nature.indexOf(value);
     Focus_img.src=find_img_type? Arr_in_Cities[count]:Arr_in_Nature[count];
   optacity_add_fun();
     
 });
-// let value=0;
+
 let img_hide=bottom_hide_img.children;
 
 function optacity_add_fun(){
